@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "sever": "node server.js",
-    "postbuild": "copy dist\\index.html dist\\404.html",
+    "postbuild": "shx cp dist\\index.html dist\\404.html",
     "webhook": "stripe listen --events checkout.session.completed --forward-to localhost:4000/api/checkout/webhook",
     "dev:all": "concurrently -n API,WEBHOOK,WEB -c blue,magenta,green \"npm run server\" \"npm run webhook\" ",
     "redeploy": "npm run build",
