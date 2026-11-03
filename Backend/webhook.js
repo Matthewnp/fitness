@@ -32,21 +32,21 @@ router.post("/", express.raw({ type: "application/json" }), async (req, res) => 
         UPDATE orders
         SET status = 'paid', stripe_session_id = ${session.id}
         WHERE stripe_session_id = ${session.id}
-           OR id::text = ${orderId ?? ""}
+          OR id::text = ${orderId ?? ""}
       `;
     } else if (event.type === "checkout.session.async_payment_succeeded") {
       await sql`
         UPDATE orders
         SET status = 'paid', stripe_session_id = ${session.id}
         WHERE stripe_session_id = ${session.id}
-           OR id::text = ${orderId ?? ""}
+          OR id::text = ${orderId ?? ""}
       `;
     } else if (event.type === "checkout.session.async_payment_failed") {
       await sql`
         UPDATE orders
         SET status = 'failed', stripe_session_id = ${session.id}
         WHERE stripe_session_id = ${session.id}
-           OR id::text = ${orderId ?? ""}
+          OR id::text = ${orderId ?? ""}
       `;
     }
 
