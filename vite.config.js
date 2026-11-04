@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: '/fitness/',
+
   plugins: [
     react(),
     tailwindcss(),
@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://fitness-bnbi.onrender.com",
+        target: "https://fitness-7vy3.onrender.com",
         changeOrigin: true,
       },
     },
