@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-base:'/fitness',
+base:"/fitness/",
   plugins: [
     react(),
     tailwindcss(),
