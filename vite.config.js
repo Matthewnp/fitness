@@ -4,8 +4,9 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  // GitHub Pages serves this project from /fitness/, not from the domain root.
-  base: "/fitness/",
+  // Use relative asset URLs so the built app works both at the domain root
+  // and under GitHub Pages' /fitness/ project path.
+  base: "./",
   plugins: [
     react(),
     tailwindcss(),
