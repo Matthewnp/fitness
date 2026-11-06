@@ -9,11 +9,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base:"/fitness/",
+  base:'/',
   server: {
     proxy: {
       "/api": {
-        target: "https://fitness-7vy3.onrender.com",
+        target: "https://fitness-kl4y.onrender.com",
         changeOrigin: true,
       },
     },

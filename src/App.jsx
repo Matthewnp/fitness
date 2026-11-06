@@ -1,5 +1,5 @@
 // src/App.jsx
-import { Routes, Route, Navigate } from "react-router";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Layout from "./Components/Layout";
 import AuthLayout from "./Components/AuthLayout";
 import Trainers from "./Components/Trainers";
@@ -16,7 +16,7 @@ import "./App.css";
 
 function App() {
   return (
-
+    <BrowserRouter >
       <Routes>
         {/* ── App shell: navbar + Hi/Logout OR Sign Up/Login ── */}
         <Route element={<Layout />}>
@@ -44,7 +44,7 @@ function App() {
           <Route path="/cancel" element={<CancelPage />} />   
         </Route>
       </Routes>
-
+    </BrowserRouter>
   );
 }
 

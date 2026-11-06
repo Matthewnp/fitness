@@ -69,7 +69,7 @@ router.post("/create-session", async (req, res) => {
     }
 
     // 5. Normalize CLIENT URL
-    const CLIENT = (process.env.CLIENT_URL || "https://fitness2-ib6i.onrender.com")
+    const CLIENT = (process.env.CLIENT_URL || "https://fitness-kl4y.onrender.com")
       .trim()
       .replace(/\/+$/, "");
 
